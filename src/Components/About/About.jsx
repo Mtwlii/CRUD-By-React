@@ -5,7 +5,6 @@ const About = () => {
 
   return (
     <>
-      
       <h1>Name: </h1>
       <h1>Name: </h1>
     </>

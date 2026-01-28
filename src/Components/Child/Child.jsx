@@ -1,7 +1,7 @@
 import React from "react";
 
 //destructuring {pro}
-const Child = ({ pro, handleDelete, handelIncrement, handelDecrement , idx }) => {
+const Child = ({ pro, handleDelete, handelIncrement, handelDecrement , idx  }) => {
   return (
     <>
       <div className="col-md-4">
@@ -39,7 +39,7 @@ const Child = ({ pro, handleDelete, handelIncrement, handelDecrement , idx }) =>
             onClick={function () {
               handelDecrement(idx);
             }}
-            className="btn btn-outline-info w-100 my-2"
+            className="btn btn-outline-warning w-100 my-2"
           >
             -
           </button>

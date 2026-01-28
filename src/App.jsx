@@ -1,25 +1,44 @@
 // import { useState } from "react";
 import "./App.css";
 import Parent from "./Components/Parent/Parent";
+import Home from "./Components/Home/Home";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import About from "./Components/About/About";
+import Projects from "./Components/Projects/Projects";
+import NotFound from "./Components/NotFound/NotFound";
+import Vue from "./Components/Vue/Vue";
+import Anguler from "./Components/Anguler/Anguler";
+import Reacctt from "./Components/Reacctt/Reacctt";
+import Layout from "./Components/Layout/Layout";
 
 function App() {
-
-
+  const router = createBrowserRouter([
+    {
+      index: "",
+      element: <Layout />,
+      children: [
+        { index: true, element: <Home /> }, //route
+        { path: "/about", element: <About /> }, //route
+        { path: "/parent", element: <Parent /> }, //route
+        { path: "*", element: <NotFound /> }, //route
+        {
+          path: "/pro",
+          element: <Projects />,
+          children: [
+            { path: "", element: <h1>Hello , Lets chose a project</h1> },
+            { path: "vue", element: <Vue /> },
+            { path: "anguler", element: <Anguler /> },
+            { path: "react", element: <Reacctt /> },
+            { path: "*", element: <NotFound /> },
+          ],
+        },
+      ],
+    },
+  ]);
 
   return (
     <>
-
-      {/* <h1>Metwally Mohamed</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi placeat
-        aspernatur quae odio necessitatibus, ex aliquid quia neque eos. Vel?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
-        repudiandae id perferendis rerum explicabo, totam molestias accusamus
-        dolorum.
-      </p>
-      <h1 className="mt-2 py-5">Metwally Mohamed Metwally</h1>
-      <i className="fas fa-solid fa-user fa-3x"></i> */}
-      <Parent />
+      <RouterProvider router={router} />
     </>
   );
 }

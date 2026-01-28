@@ -65,6 +65,7 @@ const Parent = () => {
           {product.map((pro, index) => {
             return (
               <Child
+                key={pro.id}
                 idx={index}
                 pro={pro}
                 handleDelete={handleDelete}
@@ -78,5 +79,8 @@ const Parent = () => {
     </>
   );
 };
+
+//Each child in a list should have a unique "key" prop.
+// list with map => jsx => key
 
 export default Parent;
