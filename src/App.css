@@ -3,10 +3,6 @@
     color: white !important;
     font-weight: bold;
     border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
     list-style: none;
     text-decoration: none;
-}
+}  

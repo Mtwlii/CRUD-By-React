@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
+import Style from "./About.module.css"
 
 const About = () => {
-
-
   return (
     <>
-      <h1>Name: </h1>
-      <h1>Name: </h1>
+      <div className={`p-5 ${Style.test}`}>
+        <h1 className="text-center">About Component</h1>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;
